@@ -22,6 +22,18 @@
   	<description></description>
   	<servlet-class>CrearCapacitacion</servlet-class>
   </servlet>
+  
+  <servlet>
+  	<servlet-name>ListarCapacitaciones</servlet-name>
+  	<display-name>ListarCapacitaciones</display-name>
+  	<description></description>
+  	<servlet-class>ListarCapacitaciones</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ListarCapacitaciones</servlet-name>
+  	<url-pattern>/ListarCapacitaciones</url-pattern>
+  </servlet-mapping>
+  
   <servlet-mapping>
   	<servlet-name>Inicio</servlet-name>
   	<url-pattern>/Inicio</url-pattern>
