@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -36,18 +35,23 @@
 						class="nav-link ${navItem == 'Contacto' ? 'active' : ''}"
 						href="Contacto"> <i class="bi bi-envelope-at"></i> Contacto</a>
 					</li>
-					<li class="nav-item dropdown ms-2">
-		    		<a class="nav-link dropdown-toggle ${navItem == 'Crear' ? 'active' : ''}"
-		    		id="navbarDropdown" role="button" data-bs-toggle="dropdown"  href="#">
-		    		<i class="bi bi-plus-circle"></i>
-		    		   Crear</a>
-		           	<ul class="dropdown-menu bg-dark">
+					<li class="nav-item dropdown ms-2"><a
+						class="nav-link dropdown-toggle ${navItem == 'Crear' ? 'active' : ''}"
+						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						href="#"> <i class="bi bi-plus-circle"></i> Crear
+					</a>
+					<li class="nav-item dropdown ms-2"><a
+						class="nav-link dropdown-toggle ${navItem == 'Listar' ? 'active' : ''}"
+						id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						href="#"> <i class="bi bi-card-list"></i> Listar
+					</a>
+						<ul class="dropdown-menu bg-dark">
 			            	 <li>
-			            		 <a class="dropdown-item" href="CrearCapacitacion">
-			            		 <i class="bi bi-file-plus"></i>  Crear Capacitación</a>
-			            	 </li>        	 		            	
-		           	</ul>
-		    	</li>
+			            	 	<a class="dropdown-item" href="ListarCapacitaciones">
+			            	 	<i class="bi bi-files"></i>  Listar Capacitaciones</a>
+			            	 </li>
+		           		 </ul>
+					</li>
 				</ul>
 
 				<!-- 

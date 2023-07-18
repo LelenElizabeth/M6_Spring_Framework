@@ -12,14 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 public class Inicio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
-    public Inicio() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor. 
+	 */
+	public Inicio() {
+		// TODO Auto-generated constructor stub
+	}
 
-    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
