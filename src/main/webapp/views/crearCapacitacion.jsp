@@ -18,6 +18,11 @@
 </head>
 <body class="d-flex flex-column h-100">
 	<!-- Incluyendo navbar menu -->
+	<!-- Incluyendo navbar menu -->
+	<c:set var="navItem" value="Crear" />
+	<!-- Menu activo -->
+	<c:set var="navText" value="Capacitacion" />
+	<!-- Texto Crear -->
 	<%@include file="navbar.jsp"%>
 
 	<main class="flex-shrink-0">
@@ -85,7 +90,8 @@
 	</main>
 
 	<!-- Script Validaciones del formulario -->
-	<!--<script src="${pageContext.request.contextPath}/js/formularioCapacitacion.js"></script>-->
+	<script
+		src="${pageContext.request.contextPath}/js/formularioCapacitacion.js"></script>
 
 	<!-- JavaScript Bootstrap -->
 	<script
