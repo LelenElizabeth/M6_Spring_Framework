@@ -25,7 +25,7 @@
 			<section>
 				<h1>Listado de Capacitaciones</h1>
 				<c:choose>
-					<c:when test="true">
+					<c:when test="false">
 						<div class="alert alert-danger" style="text-align: center"
 							role="alert">
 							No hay registros de Capacitaciones. <a href="CrearCapacitacion"
@@ -50,15 +50,15 @@
 							<tbody>
 								<c:forEach var="cap" items="${listaCapacitaciones}">
 									<tr>
-										<td><c:out value="${cap.getId()}"></c:out></td>
-										<td><c:out value="${cap.getNombre()}"></c:out></td>
-										<td><c:out value="${cap.getDetalle()}"></c:out></td>
-										<td><c:out value="${cap.getRutCliente()}"></c:out></td>
-										<td><c:out value="${cap.getDia()}"></c:out></td>
-										<td><c:out value="${cap.getHora()}"></c:out></td>
-										<td><c:out value="${cap.getLugar()}"></c:out></td>
-										<td><c:out value="${cap.getDuracion()}"></c:out></td>
-										<td><c:out value="${cap.getCantidadAsistentes()}"></c:out></td>
+										<td>1</td>
+										<td>Uso del extintor</td>
+										<td>Asesoría práctica del uso correcto del extintor de incendios.</td>
+										<td>77.548.321-0</td>
+										<td>Lunes</td>
+										<td>12:30</td>
+										<td>Plaza Central</td>
+										<td>90 minutos</td>
+										<td>25</td>
 									</tr>
 								</c:forEach>
 							</tbody>
