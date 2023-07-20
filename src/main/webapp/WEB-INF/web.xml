@@ -1,59 +1,63 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    id="WebApp_ID" version="4.0">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>Inicio</servlet-name>
-  	<display-name>Inicio</display-name>
-  	<description></description>
-  	<servlet-class>Inicio</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>Contacto</servlet-name>
-  	<display-name>Contacto</display-name>
-  	<description></description>
-  	<servlet-class>Contacto</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>CrearCapacitacion</servlet-name>
-  	<display-name>CrearCapacitacion</display-name>
-  	<description></description>
-  	<servlet-class>CrearCapacitacion</servlet-class>
-  </servlet>
-  
-  <servlet>
-  	<servlet-name>ListarCapacitaciones</servlet-name>
-  	<display-name>ListarCapacitaciones</display-name>
-  	<description></description>
-  	<servlet-class>ListarCapacitaciones</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>AgregarCapacitacion</servlet-name>
-  	<display-name>AgregarCapacitacion</display-name>
-  	<description></description>
-  	<servlet-class>AgregarCapacitacion</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ListarCapacitaciones</servlet-name>
-  	<url-pattern>/ListarCapacitaciones</url-pattern>
-  </servlet-mapping>
-  
-  <servlet-mapping>
-  	<servlet-name>Inicio</servlet-name>
-  	<url-pattern>/Inicio</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>Contacto</servlet-name>
-  	<url-pattern>/Contacto</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>CrearCapacitacion</servlet-name>
-  	<url-pattern>/CrearCapacitacion</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>AgregarCapacitacion</servlet-name>
-  	<url-pattern>/AgregarCapacitacion</url-pattern>
-  </servlet-mapping>
+    <!-- Definición del contenedor raíz de Spring, compartido por todos los Servlets y Filtros -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/spring/root-context.xml</param-value>
+    </context-param>
+
+    <!-- Crea el contenedor Spring compartido por todos los Servlets y Filtros -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- Procesa las solicitudes a la aplicación -->
+    <servlet>
+        <servlet-name>appServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+        <!-- Parámetros iniciales -->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring/servlet-context.xml</param-value>
+        </init-param>
+
+        <!-- Cargar al iniciar la aplicación -->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Mapping del Dispatcher -->
+    <servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filtro de Codificación -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+
+        <!-- Establecer la codificación -->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+
+        <!-- Forzar la codificación -->
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <!-- Mapping del Filtro -->
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 </web-app>
