@@ -7,14 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Listar capacitaciones</title>
-<!-- CSS del proyecto -->
-<link rel="stylesheet" href="../css/estilos.css">
-<!-- CSS Bootstrap -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-	crossorigin="anonymous">
+<!-- Incluyendo estilos -->
+<%@include file="css-proyecto.jsp"%>
+
 </head>
 <body>
 	<!-- Incluyendo navbar menu -->
@@ -30,7 +25,7 @@
 			<section>
 				<h1>Listado de Capacitaciones</h1>
 				<c:choose>
-					<c:when test="${empty listaCapacitaciones}">
+					<c:when test="false">
 						<div class="alert alert-danger" style="text-align: center"
 							role="alert">
 							No hay registros de Capacitaciones. <a href="CrearCapacitacion"
@@ -55,15 +50,15 @@
 							<tbody>
 								<c:forEach var="cap" items="${listaCapacitaciones}">
 									<tr>
-										<td><c:out value="${cap.getId()}"></c:out></td>
-										<td><c:out value="${cap.getNombre()}"></c:out></td>
-										<td><c:out value="${cap.getDetalle()}"></c:out></td>
-										<td><c:out value="${cap.getRutCliente()}"></c:out></td>
-										<td><c:out value="${cap.getDia()}"></c:out></td>
-										<td><c:out value="${cap.getHora()}"></c:out></td>
-										<td><c:out value="${cap.getLugar()}"></c:out></td>
-										<td><c:out value="${cap.getDuracion()}"></c:out></td>
-										<td><c:out value="${cap.getCantidadAsistentes()}"></c:out></td>
+										<td>1</td>
+										<td>Uso del extintor</td>
+										<td>Asesoría práctica del uso correcto del extintor de incendios.</td>
+										<td>77.548.321-0</td>
+										<td>Lunes</td>
+										<td>12:30</td>
+										<td>Plaza Central</td>
+										<td>90 minutos</td>
+										<td>25</td>
 									</tr>
 								</c:forEach>
 							</tbody>

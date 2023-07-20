@@ -98,7 +98,7 @@ function validarFormulario() {
 function mostrarError(campo, param, mensaje) {
 	var elementoCampo = document.querySelector(param+'[name="' + campo + '"]');
 	var alertaError = document.createElement('div');
-	alertaError.className = 'alert alert-danger';
+	alertaError.className = 'alert alerta alert-danger';
 	alertaError.textContent = mensaje;
 	elementoCampo.parentNode.insertBefore(alertaError, elementoCampo);
 
