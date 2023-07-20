@@ -7,14 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Listar capacitaciones</title>
-<!-- CSS del proyecto -->
-<link rel="stylesheet" href="../css/estilos.css">
-<!-- CSS Bootstrap -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-	crossorigin="anonymous">
+<!-- Incluyendo estilos -->
+<%@include file="css-proyecto.jsp"%>
+
 </head>
 <body>
 	<!-- Incluyendo navbar menu -->
@@ -30,7 +25,7 @@
 			<section>
 				<h1>Listado de Capacitaciones</h1>
 				<c:choose>
-					<c:when test="${empty listaCapacitaciones}">
+					<c:when test="true">
 						<div class="alert alert-danger" style="text-align: center"
 							role="alert">
 							No hay registros de Capacitaciones. <a href="CrearCapacitacion"
