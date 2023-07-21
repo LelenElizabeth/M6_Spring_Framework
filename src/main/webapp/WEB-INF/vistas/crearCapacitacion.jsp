@@ -66,7 +66,7 @@
 								type="text" class="form-control" name="lugar" required>
 						</div>
 						<div class="col-md-6 mb-3">
-							<label for="duracion" class="form-label">Duración</label> <input
+							<label for="duracion" class="form-label">Duración </label> <input
 								type="text" class="form-control" name="duracion" required>
 						</div>
 						<div class="col-md-12 m3-2">
@@ -84,10 +84,9 @@
 	</main>
 
 	<!-- Script Validaciones del formulario -->
-	<script
-				src="/Prevent_Asesorias/js/formularioCapacitacion.js"></script>
-
-
+	<script src="<c:url value="/res/js/formularioCapacitacion.js" />">
+		
+	</script>
 	<!-- JavaScript Bootstrap -->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
