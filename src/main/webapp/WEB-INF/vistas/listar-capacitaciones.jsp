@@ -31,7 +31,7 @@
 			<section>
 				<h1>Listado de Capacitaciones</h1>
 				<c:choose>
-					<c:when test="${empty listaCapacitaciones}">
+					<c:when test="${empty listaCapacitacion}">
 						<div class="alert alert-danger" style="text-align: center"
 							role="alert">
 							No hay registros de Capacitaciones. <a href="CrearCapacitacion"
@@ -54,7 +54,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="cap" items="${listaCapacitaciones}">
+								<c:forEach var="cap" items="${listaCapacitacion}">
 									<tr>
 										<td><c:out value="${cap.getId()}"></c:out></td>
 										<td><c:out value="${cap.getNombre()}"></c:out></td>

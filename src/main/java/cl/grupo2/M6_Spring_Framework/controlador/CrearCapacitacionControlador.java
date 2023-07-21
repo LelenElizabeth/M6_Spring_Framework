@@ -12,9 +12,6 @@ public class CrearCapacitacionControlador {
 
 	@RequestMapping(path = "/CrearCapacitacion", method = RequestMethod.GET)
     public ModelAndView mostrarInicio() {
-		
-	
-				
         return new ModelAndView("crearCapacitacion");
     }
 }
