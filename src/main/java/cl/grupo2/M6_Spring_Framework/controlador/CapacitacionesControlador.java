@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class ContactoControlador {
-
-	@RequestMapping(path = "/Contacto", method = RequestMethod.GET)
-    public ModelAndView mostrarInicio() {
-        return new ModelAndView("contacto");
-    }
+public class CapacitacionesControlador {
+	
+	@RequestMapping(path ="/ListarCapacitaciones",method = RequestMethod.GET)
+	public ModelAndView listarCapacitaciones() {
+		return new ModelAndView ("listar-capacitaciones");
+	}
 }
