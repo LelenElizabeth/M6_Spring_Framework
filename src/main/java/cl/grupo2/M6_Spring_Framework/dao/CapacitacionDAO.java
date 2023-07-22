@@ -1,13 +1,19 @@
 package cl.grupo2.M6_Spring_Framework.dao;
 
 import java.util.ArrayList;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
+import org.apache.log4j.spi.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.grupo2.M6_Spring_Framework.modelo.Capacitacion;
 
 @Service
 public class CapacitacionDAO implements ICapacitacionDAO {
-
+	
+	
 	@Override
 	public ArrayList<Capacitacion> obtenerCapacitaciones() {
 
@@ -35,7 +41,9 @@ public class CapacitacionDAO implements ICapacitacionDAO {
 
 	@Override
 	public boolean crearCapacitacion(Capacitacion cap) {
-		// TODO Auto-generated method stub
+		
+		System.out.println(cap);
+		
 		return false;
 	}
 
