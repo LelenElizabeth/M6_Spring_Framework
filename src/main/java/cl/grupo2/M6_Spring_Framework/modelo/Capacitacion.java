@@ -1,7 +1,10 @@
 package cl.grupo2.M6_Spring_Framework.modelo;
 
+import org.springframework.stereotype.Component;
+
 import utils.ValidarDatos;
 
+@Component
 public class Capacitacion {
 	private int id;
 	private String nombre;
