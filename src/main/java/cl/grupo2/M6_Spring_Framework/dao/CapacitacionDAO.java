@@ -1,22 +1,22 @@
 package cl.grupo2.M6_Spring_Framework.dao;
 
-import java.util.ArrayList;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
-import org.apache.log4j.spi.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.ArrayList;
+
+
 import org.springframework.stereotype.Service;
 
 import cl.grupo2.M6_Spring_Framework.modelo.Capacitacion;
+import utils.Log;
+import utils.TipoLog;
 
 @Service
 public class CapacitacionDAO implements ICapacitacionDAO {
 	
-	
 	@Override
 	public ArrayList<Capacitacion> obtenerCapacitaciones() {
 
+		Log.registrarInfo(getClass(),TipoLog.INFO, "Llamada al método obtenerCapacitaciones()");
 		ArrayList<Capacitacion> listaCapacitacion = new ArrayList<>();
 
 		listaCapacitacion.add(new Capacitacion(1, "Programación Java", "Clase Magistral", 7729454, "Lunes", "10:30",
@@ -36,12 +36,14 @@ public class CapacitacionDAO implements ICapacitacionDAO {
 		listaCapacitacion.add(new Capacitacion(6, "Seguridad en altura y manejo de herramientas",
 				"Riesgos en trabajo en altura y uso seguro de herramientas", 8842367, "Viernes", "10:00",
 				"Sala de conferencias B", "2 Horas", 60));
+		
 		return listaCapacitacion;
 	}
 
 	@Override
 	public boolean crearCapacitacion(Capacitacion cap) {
-		
+
+		Log.registrarInfo(getClass(),TipoLog.INFO, "Llamada al método crearCapacitacion() desde CapacitacionDAO");
 		System.out.println(cap);
 		
 		return false;
