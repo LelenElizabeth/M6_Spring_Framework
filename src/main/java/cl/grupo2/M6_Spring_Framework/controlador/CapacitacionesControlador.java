@@ -10,11 +10,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import cl.grupo2.M6_Spring_Framework.dao.CapacitacionDAO;
 import cl.grupo2.M6_Spring_Framework.modelo.Capacitacion;
+import cl.grupo2.M6_Spring_Framework.servicio.CapacitacionServicio;
 
 @Controller
 public class CapacitacionesControlador {
+	
 	@Autowired
-	private CapacitacionDAO cap;
+	private CapacitacionServicio cap;
 	
 	@RequestMapping(value ="/ListarCapacitaciones",method = RequestMethod.GET)
 	public ModelAndView listarCapacitaciones() {
