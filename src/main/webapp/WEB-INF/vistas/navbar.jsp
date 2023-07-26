@@ -46,6 +46,11 @@
 							<li><a class="dropdown-item" href="CrearCapacitacion"> <i
 									class="bi bi-file-plus"></i> Crear Capacitación
 							</a></li>
+							<li>
+								<a class="dropdown-item" href="CrearUsuario"> <i
+									class="bi bi-file-plus"></i> Crear Usuario
+								</a>
+							</li>
 						</ul>
 						<li class="nav-item dropdown ms-2"><a
 						class="nav-link dropdown-toggle ${navItem == 'Listar' ? 'active' : ''}"
@@ -54,8 +59,13 @@
 					</a>
 						<ul class="dropdown-menu bg-dark">
 							<li><a class="dropdown-item" href="ListarCapacitaciones">
-									<i class="bi bi-files"></i> Listar Capacitaciones
-							</a></li>
+									<i class="bi bi-files"></i> Listar Capacitaciones</a>
+							</li>
+			            	 <li>
+			            	 	<a class="dropdown-item" href="ListadoUsuarios">
+			            	 	<i class="bi bi-people"></i>  Listar Usuarios</a>
+			            	 </li>
+			            	 
 						</ul></li>
 				</ul>
 
