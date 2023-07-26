@@ -29,9 +29,6 @@ public class CapacitacionDAO implements ICapacitacionDAO {
 	public ArrayList<Capacitacion> obtenerCapacitaciones() {
 
 		String SQL_SELECT = "SELECT id, nombre, detalle,rut_cliente, dia, hora, lugar, duracion, cantidad_asistentes FROM Capacitaciones";
-		List<Capacitacion> capacitaciones = new ArrayList<>();
-		
-		
 		
 		Log.registrarInfo(getClass(), TipoLog.INFO, "Llamada al método obtenerCapacitaciones()");
 		ArrayList<Capacitacion> listaCapacitacion = new ArrayList<>();
